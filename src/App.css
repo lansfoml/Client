@@ -1,38 +1,136 @@
-.App {
+
+.homepage {
   text-align: center;
+  font-size: large;
+  font-family: 'Courier New', monospace;
+  
+}
+.topnav {
+  background-color: #000000;
+  font-family: 'Courier New', monospace;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+h2 {
+  background-color: #000000;
+  color:#f3ca20;
+  margin: 0;
+  font-family: 'Courier New', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Dropdown Button */
+.btn {
+  background-color: #f3ca20;
+  color: #000000;
+  padding: 16px;
+  font-size: 16px;
+  border-style: none;
+  border-color: black;
+  border-radius: 10px;
+  margin: 2px;
+  font-family: 'Courier New', monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  
 }
 
-.App-link {
-  color: #61dafb;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  columns: 2;
+  font-family: 'Courier New', monospace;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Courier New', monospace;
 }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #f3ca20;}
+
+
+#players {
+  
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-family: 'Courier New', monospace;
+  
+}
+
+#players td, #players th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 16.6667%;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  
+}
+
+#players tr:hover {background-color: #ddd;}
+
+#players th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f3ca20;
+  color: #000000;
+  font-family: 'Courier New', monospace;
+  overflow:hidden;
+}
+
+#coaches {
+  
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-family: 'Courier New', monospace;
+  
+}
+
+#coaches td, #coaches th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 20%;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  
+}
+
+#coaches tr:hover {background-color: #ddd;}
+
+#coaches th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f3ca20;
+  color: #000000;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+
+
