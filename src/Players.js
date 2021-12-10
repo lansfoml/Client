@@ -10,6 +10,7 @@ export function Players(props) {
     
    const result = players.filter(player => player.position !== "Coach");
    const dispatch = useDispatch();
+   const isProgressing = useSelector(state => state.isProgressing)
 
   //  const [name, setName] = useState(players.entry);
 
@@ -62,6 +63,8 @@ export function Players(props) {
                   
                   
           )}
+
+          {isProgressing && <div className="spinner" />}
           {/* <label>Name</label>
           <textarea
         value={name}

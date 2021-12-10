@@ -38,17 +38,17 @@ function reducer(state, action) {
         }),
       };
 
-      case Action.CancelMemoryEdit:
-      return {
-        ...state,
-        memories: state.memories.map(memory => {
-          if (memory.id === action.payload) {
-            return {...memory, isEditing: false};
-          } else {
-            return memory;
-          }
-        }),
-      };
+      case Action.StartedWaiting:
+        return {
+          ...state,
+          isWaiting: true,
+        };
+      case Action.StoppedWaiting:
+        return {
+          ...state,
+          isWaiting: false,
+        };
+      
     default:
       return state;
   }
@@ -64,7 +64,7 @@ const initialState = {
       age: 34, 
       team: "Lakers",
       position: "SG",
-      isEditing: false,
+      
     },
     {
       id: 2,
@@ -74,9 +74,10 @@ const initialState = {
       age: 21, 
       team: "Lakers",
       position: "C",
-      isEditing: false,
+      
     },
   ],
+  isWaiting: false,
 };
 
 export const store = createStore(reducer, initialState, applyMiddleware(thunk));

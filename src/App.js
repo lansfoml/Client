@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { GetTeam } from './GetTeam.js'
 import { Home } from './Home.js'
 import { Coach } from './Coach.js'
@@ -19,6 +19,7 @@ import {Teams} from './Teams.js'
 function App() {
   
   const dispatch = useDispatch();
+  const isProgressing = useSelector((state) => state.isWaiting);
 
   useEffect(() => {
     //const play = new Player(players);
@@ -30,6 +31,7 @@ function App() {
   return (
     
     <div>
+      
       <div className="topnav">
         
       <button className="btn"
@@ -51,6 +53,7 @@ function App() {
 
         
       </div>
+      {isProgressing && <div className="spinner" />} 
 
       
       
